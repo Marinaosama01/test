@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fa-solid fa-cart-shopping">  fresh cart</i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+        <div class="navbar-nav m-auto">
+          <a *ngIf="isLogin" class="nav-link" routerLink="home" >Home</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="cart" >Cart</a>
+         
+          <a *ngIf="isLogin" class="nav-link" routerLink="brands" >Brands</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="categories" >Categories</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="products" >Products</a>
+       </div>
+       <div class="d-flex gap-3 align-items-center">
+         <i class="fa-solid fa-cart-shopping "></i>
+         <a *ngIf="!isLogin" class="nav-link" routerLink="login" >Login</a>
+         <a *ngIf="!isLogin" class="nav-link" routerLink="register" >Register</a>
+         <a *ngIf="isLogin" (click)="logout()" class="nav-link cursor-pointer">Logout</a>
+       </div>
+
+
+      </div>
+    </div>
+  </nav>
+  
+        
